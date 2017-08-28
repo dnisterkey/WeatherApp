@@ -1,0 +1,20 @@
+.weather-app-search-container {
+  margin: 10px auto;
+  background-color: #c8db7d;
+  padding: 15px 0;
+}
+
+.first-line-container
+  md-input-container {
+    padding-right: 10px;
+    width: 250px;
+  }
+.first-line-container
+p {
+  padding-right: 10px;
+}
+
+.first-line-container, .second-line-container {
+  width: fit-content;
+  margin: 0 auto;
+}

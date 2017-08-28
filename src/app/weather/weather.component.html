@@ -1,0 +1,17 @@
+<div class="weather-app-search-container">
+<div class="first-line-container">
+  <md-input-container>
+  <input mdInput placeholder="Search" [(ngModel)]="city" (input)="onCityChange()" [mdAutocomplete]="auto">
+</md-input-container>
+  <md-autocomplete #auto="mdAutocomplete">
+    <md-option *ngFor="let lCity of suggestCities | async" [value]="lCity">
+      {{ state }}
+    </md-option>
+  </md-autocomplete>
+  <button md-raised-button (click)="onSearch()">Search</button>
+</div>
+  <div class="second-line-container">
+  <p>{{this.weatherData?.query?.results?.channel?.title}}</p>
+  </div>
+</div>
+<app-weather-details [details]="weatherData"></app-weather-details>

@@ -1,0 +1,21 @@
+.current-day {
+  background-color: #c8db7d;
+  margin: 5px 0;
+  padding: 20px;
+}
+
+.current-week {
+  display: flex;
+  overflow-x: auto;
+}
+
+.current-week li {
+  margin: 5px;
+  width: fit-content;
+  display: inline-block;
+}
+
+.current-week li>md-card {
+  background-color: #bde1ef;
+  width: 200px;
+}

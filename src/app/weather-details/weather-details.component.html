@@ -1,0 +1,36 @@
+<div class="current-day">
+<p>
+  sunrise: {{this.details?.query?.results?.channel?.astronomy?.sunrise}}
+  </p>
+<p>
+  sunset: {{this.details?.query?.results?.channel?.astronomy?.sunset}}
+</p>
+<p>
+  today: {{this.details?.query?.results?.channel?.item?.condition?.date}}
+</p>
+<p>
+  temperature: {{this.details?.query?.results?.channel?.item?.condition?.temp}} F
+</p>
+<p>
+  {{this.details?.query?.results?.channel?.item?.condition?.text}}
+</p>
+</div>
+
+<ul class="current-week" *ngIf="details">
+    <li  *ngFor="let week of this.details?.query?.results?.channel?.item?.forecast">
+      <md-card class="week-day-weather">
+    <p>
+    date: {{week.date}}  {{week.day}}
+  </p>
+    <p>
+      max temperature: {{week.high}} F
+    </p>
+    <p>
+      min temperature: {{week.low}} F
+    </p>
+    <p>
+      {{week.text}}
+    </p>
+</md-card>
+  </li>
+</ul>
